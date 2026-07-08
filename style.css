@@ -1,0 +1,463 @@
+/* Základné resety */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0d1117; /* GitHub dark bg */
+    color: #c9d1d9;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navigácia */
+
+.accent {
+    color: #58a6ff;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+header {
+    background-color: rgba(22, 27, 34, 0.85); /* Polopriehľadná tmavá */
+    backdrop-filter: blur(12px); /* Sklenený efekt */
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.7);
+    padding: 10px 0; /* Zväčšenie celkovej výšky */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem; /* Zväčšené logo */
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #f0f6fc;
+}
+
+/* Pravá strana navigácie (odkazy + jazyky) */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 35px; /* Priestor medzi menu a prepínačom */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px; /* Väčšie rozostupy medzi odkazmi */
+}
+
+.nav-links a {
+    color: #8b949e;
+    text-decoration: none;
+    font-size: 1.05rem; /* Väčšie a čitateľnejšie písmo */
+    font-weight: 500;
+    padding: 6px 0;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+/* Animovaná linka pod odkazom pri hoveri */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #58a6ff;
+    transition: width 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #f0f6fc;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Jazykový prepínač */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    background-color: #21262d;
+    padding: 6px 14px;
+    border-radius: 20px; /* Zaoblený "pill" tvar */
+    border: 1px solid #30363d;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.lang-btn {
+    color: #8b949e;
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 2px 4px;
+}
+
+.lang-btn:hover {
+    color: #58a6ff;
+}
+
+.lang-btn.active {
+    color: #58a6ff; /* Aktívny jazyk svieti namodro */
+}
+
+.lang-divider {
+    color: #30363d;
+    margin: 0 8px;
+    user-select: none;
+}
+
+/* Doplnenie pre responzivitu, aby prepínač nezmizol na mobile */
+@media (max-width: 600px) {
+    .nav-links { 
+        display: none; /* Skryje textové menu na mobile */
+    }
+    .nav-right {
+        gap: 0;
+    }
+}
+
+/* Hero sekcia s kontaktom */
+.hero {
+    padding: 80px 0;
+    background: radial-gradient(circle at top right, #1f2937, #0d1117);
+    border-bottom: 1px solid #21262d;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: #f0f6fc;
+    margin-bottom: 5px;
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    color: #8b949e;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.quick-contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 8px;
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    text-align: center;
+}
+
+.quick-contact a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.quick-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Sekcie obecne */
+.section {
+    padding: 70px 0;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    color: #f0f6fc;
+    margin-bottom: 25px;
+}
+
+.section-intro {
+    margin-top: -15px;
+    margin-bottom: 30px;
+    color: #8b949e;
+}
+
+.bg-dark-accent {
+    background-color: #161b22;
+    border-top: 1px solid #21262d;
+    border-bottom: 1px solid #21262d;
+}
+.border-top {
+    border-top: 1px solid #21262d;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.interest-card {
+    background-color: #161b22;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-3px);
+    border-color: #58a6ff; /* Pri prejdení myšou sa jemne zvýrazní */
+}
+
+.interest-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.interest-card h3 {
+    color: #f0f6fc;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.interest-card p {
+    font-size: 0.95rem;
+    color: #8b949e;
+    line-height: 1.5;
+}
+
+/* Časová os (Skúsenosti a Vzdelanie) */
+.timeline {
+    position: relative;
+    border-left: 2px solid #30363d;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-date {
+    font-weight: 600;
+    color: #58a6ff;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+    color: #f0f6fc;
+    font-size: 1.2rem;
+}
+
+.timeline-content h4 {
+    color: #8b949e;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Zručnosti */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+}
+
+.skill-card h3 {
+    color: #f0f6fc;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tags span {
+    background-color: #21262d;
+    color: #c9d1d9;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    border: 1px solid #30363d;
+    position: relative;
+    cursor: help;
+}
+.skill-tags span::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #161b22;
+    color: #c9d1d9;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+}
+.skill-tags span::after {
+    content: '';
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #30363d transparent transparent transparent;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+}
+.skill-tags span:hover::before,
+.skill-tags span:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+.skill-tags span.no-tooltip {
+    cursor: default;
+}
+.skill-tags span.no-tooltip:hover::before,
+.skill-tags span.no-tooltip:hover::after {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+.skill-tags .skill-lvl-adv {
+    border-color: #388bfd;
+    color: #58a6ff;
+    background-color: rgba(56, 139, 253, 0.1);
+}
+.skill-tags .skill-lvl-int {
+    border-color: #30a14e;
+    color: #7ee787;
+    background-color: rgba(48, 161, 78, 0.1);
+}
+.skill-tags .skill-lvl-beg {
+    border-color: #8b949e;
+    color: #c9d1d9;
+    background-color: rgba(139, 148, 158, 0.1);
+}
+
+
+/* Projekty */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.project-box {
+    background-color: #0d1117;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-box h3 {
+    color: #58a6ff;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.project-tech {
+    margin-bottom: 20px;
+}
+
+.project-tech code {
+    background-color: #21262d;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    color: #ff7b72;
+}
+
+.github-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #c9d1d9;
+    background-color: #21262d;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.github-btn:hover {
+    background-color: #30363d;
+    border-color: #8b949e;
+}
+
+/* Pätička */
+footer {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #8b949e;
+    border-top: 1px solid #21262d;
+}
+
+/* Mobilné zobrazenie */
+@media (max-width: 600px) {
+    .hero-text h1 { font-size: 2rem; }
+    .nav-links { display: none; } /* Zjednodušenie pre mobil */
+}
