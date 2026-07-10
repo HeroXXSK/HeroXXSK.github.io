@@ -8,7 +8,6 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🛡️</text></svg>">
 <body>
 
-    <!-- Navigácia -->
     <header>
         <nav class="container">
             <div class="logo">Jakub Hunka</div>
@@ -21,7 +20,6 @@
                     <li><a href="#projects">Projekty</a></li>
                 </ul>
                 
-                <!-- Prepínač jazykov -->
                 <div class="lang-switch">
                     <a href="index.html" class="lang-btn active">SK</a>
                     <span class="lang-divider">|</span>
@@ -31,7 +29,7 @@
         </nav>
     </header>
 
-    <!-- Úvod / Rýchly kontakt (Nahrádza záhlavie životopisu) -->
+    
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-text">
@@ -39,7 +37,6 @@
                 <h2> Nadšenec pre kyberbezpečnosť</h2>
                 <p class="tagline">Hľadám príležitosti v oblasti Kyberbezpečnosti. Zameriavam sa na bezpečnost sieťovej infraštruktúry no som otvorený aj iným príležitostiam.</p>
                 
-                <!-- Rýchle kontaktné údaje priamo v úvode -->
                 <div class="quick-contact">
                     <p>📍 Banská Belá (SK)</p>
                     <p>📍 Brno (CZ)</p>
@@ -51,11 +48,8 @@
         </div>
     </section>
 
-    <!-- O mne / Profil -->
-    <section id="about" class="container section">
-        <h2>Profesijný profil</h2>
-        <p></p>
-    </section>
+    <!--<section id="about" class="container section">
+    </section>-->
     <section id="interests" class="container section border-top">
         <h2>Čo robím, keď práve nepracujem?</h2>
         
@@ -80,13 +74,11 @@
         </div>
     </section>
 
-    <!-- Pracovné skúsenosti a Vzdelanie -->
     <section id="experience" class="bg-dark-accent section">
         <div class="container">
             <h2>Skúsenosti & Vzdelanie</h2>
             <div class="timeline">
                 
-                <!-- Položka 1 (Napr. súčasná práca alebo štúdium) -->
                 <div class="timeline-item">
                     <div class="timeline-date">2025 - Súčasnosť</div>
                     <div class="timeline-content">
@@ -96,13 +88,12 @@
                     </div>
                 </div>
 
-                <!-- Položka 2 (Napr. vysoká alebo stredná škola) -->
                 <div class="timeline-item">
                     <div class="timeline-date">2021 - 2025</div>
                     <div class="timeline-content">
                         <h3>Informačné a Sieťové technológie</h3>
                         <h4>Stredná priemyselná škola Jozefa Murgaša, Banská Bystrica</h4>
-                        <p></p>
+                        <p>Štúdium sieťových technológií, objektového programovania (C#), vývoja webových aplikácií (HTML, CSS, PHP), práca s databázovými systémami MySQL a základov kybernetickej bezpečnosti.</p>
                     </div>
                 </div>
 
@@ -110,7 +101,6 @@
         </div>
     </section>
 
-    <!-- Technické a Mäkké Zručnosti -->
     <section id="skills" class="container section">
         <h2>Zručnosti & Certifikácie</h2>
         <div class="skills-grid">
@@ -118,22 +108,22 @@
             <div class="skill-card">
                 <h3>Hard Skills</h3>
                 <div class="skill-tags">
-                    <span class="skill-lvl-beg" data-tooltip="">C & Assembly</span>
-                    <span class="skill-lvl-int" data-tooltip="">Git & GitHub</span>
-                    <span class="skill-lvl-int" data-tooltip="">Linux / Windows administrácia</span>
-                    <span class="skill-lvl-adv" data-tooltip="">SQL</span>
-                    <span class="skill-lvl-adv" data-tooltip="">Java / C#</span>
-                    <span class="skill-lvl-int" data-tooltip="">Python</span>
-                    <span class="skill-lvl-int" data-tooltip="">HTML / CSS / PHP </span>
+                    <span class="no-tooltip" data-tooltip="">C & Assembly</span>
+                    <span class="no-tooltip" data-tooltip="">Git & GitHub</span>
+                    <span class="no-tooltip" data-tooltip="">Linux / Windows administrácia</span>
+                    <span class="no-tooltip" data-tooltip="">SQL</span>
+                    <span class="no-tooltip" data-tooltip="">Java / C#</span>
+                    <span class="no-tooltip" data-tooltip="">Python</span>
+                    <span class="no-tooltip" data-tooltip="">HTML / CSS / PHP </span>
                 </div>
             </div>
 
             <div class="skill-card">
                 <h3>Soft Skills & Jazyky</h3>
                 <div class="skill-tags">
-                    <span class="skill-lvl-adv" data-tooltip="Rodný jazyk">Slovenčina & Čeština</span>
-                    <span class="skill-lvl-adv" data-tooltip="">Angličtina</span>
-                    <span class="skill-lvl-beg" data-tooltip="">Nemčina & Ruština</span>
+                    <span class="no-tooltip" data-tooltip="Rodný jazyk">Slovenčina & Čeština</span>
+                    <span class="no-tooltip" data-tooltip="">Angličtina</span>
+                    <span class="no-tooltip" data-tooltip="">Nemčina & Ruština</span>
                     <span class="no-tooltip" data-tooltip="">Analytické myslenie</span>
                     <span class="no-tooltip" data-tooltip="">Tímová práca</span>
                     <span class="no-tooltip" data-tooltip="">Riešenie problémov</span>
@@ -153,7 +143,6 @@
         </div>
     </section>
 
-    <!-- Projekty (Kľúčová časť, keďže ide o GitHub portfólio) -->
     <section id="projects" class="bg-dark-accent section">
         <div class="container">
             <h2>Reprezentatívne projekty</h2>
@@ -161,17 +150,15 @@
             
             <div class="projects-grid">
                 
-                <!-- Projekt 1 -->
                 <div class="project-box">
                     <h3>Web Stránka Cestovnej Kancelárie</h3>
                     <p>Môj prvý a zároveň maturitný projekt. Išlo o dynamickú webstránku pre potenciálnu cestovnú kanceláriu. Aplikovaný systém zasielnia emailov.</p>
                     <div class="project-tech">
                         <code>HTML</code> <code>CSS</code> <code>PHP</code> <code>MySQL</code>
                     </div>
-                    <a href="https://github.com/HeroXXSK/RocnikovyProjekt" class="github-btn" target="_blank">Pozrieť kód na GitHub &rarr;</a>
+                    <a href="https://github.com/HeroXXSK/MaturitnyProjekt" class="github-btn" target="_blank">Pozrieť kód na GitHub &rarr;</a>
                 </div>
 
-                <!-- Projekt 2 -->
                 <div class="project-box">
                     <h3>Network Scanner</h3>
                     <p>Rozpracovaný projekt network scanneru. Používateľ dokáže zistiť pripojené zariadenia v sieti alebo monitorovať odchádzajúce pakety.</p>

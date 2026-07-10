@@ -34,14 +34,14 @@ body {
 }
 
 header {
-    background-color: rgba(22, 27, 34, 0.85); /* Polopriehľadná tmavá */
-    backdrop-filter: blur(12px); /* Sklenený efekt */
+    background-color: rgba(22, 27, 34, 0.85); 
+    backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px);
     position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(48, 54, 61, 0.7);
-    padding: 10px 0; /* Zväčšenie celkovej výšky */
+    padding: 10px 0; 
 }
 
 nav {
@@ -51,7 +51,7 @@ nav {
 }
 
 .logo {
-    font-size: 1.4rem; /* Zväčšené logo */
+    font-size: 1.4rem; 
     font-weight: 800;
     letter-spacing: -0.5px;
     color: #f0f6fc;
@@ -61,19 +61,19 @@ nav {
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 35px; /* Priestor medzi menu a prepínačom */
+    gap: 35px; 
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px; /* Väčšie rozostupy medzi odkazmi */
+    gap: 25px; 
 }
 
 .nav-links a {
     color: #8b949e;
     text-decoration: none;
-    font-size: 1.05rem; /* Väčšie a čitateľnejšie písmo */
+    font-size: 1.05rem; 
     font-weight: 500;
     padding: 6px 0;
     position: relative;
@@ -106,7 +106,7 @@ nav {
     align-items: center;
     background-color: #21262d;
     padding: 6px 14px;
-    border-radius: 20px; /* Zaoblený "pill" tvar */
+    border-radius: 20px; 
     border: 1px solid #30363d;
     font-size: 0.9rem;
     font-weight: 600;
@@ -124,7 +124,7 @@ nav {
 }
 
 .lang-btn.active {
-    color: #58a6ff; /* Aktívny jazyk svieti namodro */
+    color: #58a6ff; 
 }
 
 .lang-divider {
@@ -136,7 +136,7 @@ nav {
 /* Doplnenie pre responzivitu, aby prepínač nezmizol na mobile */
 @media (max-width: 600px) {
     .nav-links { 
-        display: none; /* Skryje textové menu na mobile */
+        display: none; 
     }
     .nav-right {
         gap: 0;
@@ -232,7 +232,7 @@ nav {
 
 .interest-card:hover {
     transform: translateY(-3px);
-    border-color: #58a6ff; /* Pri prejdení myšou sa jemne zvýrazní */
+    border-color: #58a6ff; 
 }
 
 .interest-icon {
@@ -459,5 +459,5 @@ footer {
 /* Mobilné zobrazenie */
 @media (max-width: 600px) {
     .hero-text h1 { font-size: 2rem; }
-    .nav-links { display: none; } /* Zjednodušenie pre mobil */
+    .nav-links { display: none; }
 }
